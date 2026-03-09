@@ -20,7 +20,7 @@ export const createTransaction = async (req, res) => {
 export const getTransactions = async (req, res) => {
   try {
     const transactions = await getTransactionsService(req.user._id);
-    res.json(transaction);
+    res.json(transactions);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
